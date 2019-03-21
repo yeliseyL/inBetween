@@ -1,0 +1,2 @@
+# inBetween
+  inBetween is a free set of animation tools built to speed up animator’s workflow and make it more comfortable inside SideFX Houdini. This plugin combines multiple features for “traditional” keyframe animation, such as automated breakdown pose creation, custom static ghosting, quick selection sets, instant reference import and more. No matter which animation method you choose, inBetween will help you do your work quickly and efficiently.
