@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pythonPanelDocument>
+  <!-- This file contains definitions of Python interfaces and the
+ interfaces menu.  It should not be hand-edited when it is being
+ used by the application.  Note, that two definitions of the
+ same interface or of the interfaces menu are not allowed
+ in a single file. -->
+  <interface name="inbetween" label="InBetween" icon="MISC_python" showNetworkNavigationBar="false" help_url="">
+    <script><![CDATA[""" inBetween - set of animation scripts for SideFX Houdini
+
+    DESCRIPTION:
+    This plugin combines multiple features for traditional keyframe animation,
+    such as automated breakdown pose creation, custom static ghosting, quick selection sets,
+    instant reference import and more.
+        
+    AUTHOR:
+        Elisey Lobanov - http://www.eliseylobanov.com
+
+    COPYRIGHT:
+        Copyright 2019 Elisey Lobanov - All Rights Reserved
+"""
+
+from inBetween import inBetween   
+reload(inBetween)
+        
+def onCreateInterface():
+    interface = inBetween.BreakdownKeysInterface(kwargs['paneTab'])
+    return interface
+]]></script>
+    <includeInPaneTabMenu menu_position="0" create_separator="false"/>
+    <includeInToolbarMenu menu_position="101" create_separator="false"/>
+    <help><![CDATA[InBetween v.1.0 by Elisey Lobanov, 2019]]></help>
+  </interface>
+</pythonPanelDocument>
